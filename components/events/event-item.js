@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Image from 'next/image';
 import Style from './event-item.module.css'
 import Button from 'components/ui/Button';
 import DateIcon from 'components/icons/date-icon';
@@ -18,7 +19,9 @@ export default function EventItem (props) {
     const exploreLink = `/events/${id}`;
   return (
       <li className={Style.item}>
-        <img className='' src={'/' + image } alt={title}/>
+
+        <Image className='' src={'/' + image } alt={title} width={250} height={160}/>
+        {/* <img className='' src={'/' + image } alt={title}/> */}
         <div className={Style.content}>
             <div className={Style.summary}>
                 <h2>{title}</h2>
